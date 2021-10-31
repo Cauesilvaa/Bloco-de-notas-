@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bloco de notas</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Css bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+<body>
+
+    <div id="div-fundo-notas">
+        <div id="div-notas">
+        <h1>Suas notas</h1>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+         class="btn btn-secondary btn-lg" id="nova-nota">Nova nota</button>
+    </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Titulo</th>
+              <th scope="col">Visualizar</th>
+              <th scope="col">excluir</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr class="">
+              <!-- <th scope="row">1</th>
+              <td>Mark</td>
+              <td>
+                
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Visualizar
+                </button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-primary">
+                  Excluir
+                </button>
+              </td> -->
+              <!-- <td>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Abrir nota
+                </button>
+              </td> -->
+            </tr>
+          </tbody>
+      </table>
+
+<!-- Modal Visualizar-->
+<div id="div-modal">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <input type="text" class="modal-title" name="Nome" id="titulo-visualizar" required="required" disabled>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <textarea name="nota" id="nota-visualizar" disabled></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Inserir-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <input type="text" class="modal-title" name="Nome" placeholder="   informe o titulo" id="titulo" required="required">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <textarea name="nota" id="nota" placeholder="   deixe sua nota"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-secondary" id="adicionar">Adicionar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <script src="js/notas.js"></script>
+
+    <!-- Js bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
